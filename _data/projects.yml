@@ -1,0 +1,20 @@
+- title: Limbo
+  link: https://jblob-devs.github.io/limbo
+  image: projects/wagoogusthumbnail.png
+  description: Physics based web playground
+- title: Kitten-ify
+  link: /projects/kittenify/
+  image: projects/kittenifylogo.png
+  description: Chrome Web Extension to turn images into randomly generated cats
+- title: Kosmomart
+  link: https://github.com/jblob-devs/KosmoMart
+  image: entity/redsmile.png
+  description: An AI powered space dialogue game
+- title: Music Projects
+  link: /projects/nullish
+  image: projects/refraction.jpg
+  description: Music made for leisure, or for computer science projects
+- title: ScraperHog
+  link: /scraperhog/
+  image: projects/scraperhogbotpicture.jpg
+  description: A lightweight discord bot for web scraping and crawling

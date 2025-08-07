@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{'/assets/css/main.scss' | absolute_url}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+</head>
+  <body>
+    <nav class="navbar">
+      <ul class="navbar-nav">
+
+        <li class="logo">
+          <a class="nav-link">
+            <span class="link-text">Murari Thota</span>
+        </a></li>
+        
+        {% for item in site.data.menu %}
+        <li class="nav-item">
+          <a id="{{item.title}}" class="nav-link {% if page.url == item.link%} active{% endif %}" href="{{item.link}}">
+          <img class="nav-images" src="/assets/images/{{item.image}}"/>
+          <span class="link-text">{{item.title}}</span>
+        </a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+   
+
+
+
+    <div id="main">
+      {{ content }}
+    </div>
+    
+
+
+    <style>
+      html{
+        height:100%
+      }h1{
+        margin-top: 0px;
+      }
+      nav ul li a{
+        text-decoration: none;
+      }
+      nav ul li a:hover{
+        text-decoration: underline;
+      }
+      :root{
+        font-size: 18px;
+        --text-primary: #b6b6b6;
+        --text-secondary: #ececec;
+        --bg-primary: #23232e;
+        --bg-secondary: #141418;
+      }
+
+      body{
+        color:black;
+        margin:0;
+        padding:0;
+        height:100%;
+      }
+      #main{
+        margin-left: 5rem;
+        padding:0;
+        text-align: center;
+        height: 100vh;
+      }
+      body::-webkit-scrollbar{
+        width: 0.25 rem;
+      }
+      body::-webkit-scrollbar-track{
+        background: #1e1e24;
+      }
+      .navbar{
+        width:5rem;
+        height: 100vh;
+        position:fixed;
+        background-color: var(--bg-primary);
+        transition: 400ms ease;
+      }
+      .navbar-nav{
+        list-style: none;
+        padding: 0;
+        margin:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }.nav-item{
+        width:100%
+      }.nav-link{
+        display:flex;
+        align-items:center;
+        height:5rem;
+        color:var(--text-primary);
+        text-decoration: none;
+        filter: grayscale(100%) opacity(0.7);
+        transition: 400ms;
+      }
+      .link-text{
+        display:none;
+        margin-left: 1rem;
+      }
+      .nav-link img{
+        width: 4rem;
+        margin: 0 0.5rem;
+      }
+      .navbar:hover{
+        width:16rem;
+      }
+      .navbar:hover .link-text{
+        display:block;
+      }.nav-link:hover{
+        filter: grayscale(0%) opacity(1);
+        background: var(--bg-secondary);
+        color: var(--text-secondary);
+      }.logo img{
+        transform: rotate(0deg);
+        transition: transform 400ms;
+      }.navbar:hover .logo img {
+        transform: rotate(-360deg)
+      }html{
+        background-color: #faf6ea;
+      }*{
+        font-family:'Quicksand', sans-serif;
+        padding: 5px auto;
+      }@keyframes appear {
+        0% { left: 500px; opacity: 0; }
+        100% { left: 16px; opacity: 1; }  
+      }#homeIMG{
+        -webkit-animation: appear 2s;
+        animation: appear 2s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+      }#toProjects{
+        transform: rotate(0deg);
+        transition: transform 400ms;
+      }#toProjects:hover{
+        transform: rotate(-100deg);
+        transform: scale(1.2);
+      }.nav-images{
+        transition: transform 200ms;
+        transform: rotate(0deg);
+      }.nav-images:hover{
+        transform: rotate(-20deg);
+      }
+      
+
+      </style>
+  </body>
+</html>
