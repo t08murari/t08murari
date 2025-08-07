@@ -1,0 +1,9 @@
+- title: Home
+  link: /
+  image: blobs/basicBlob.png
+- title: About Me 
+  link: /aboutme
+  image: blobs/slimeblob.png
+- title: Projects
+  link: /projects
+  image: blobs/sketchling.png
